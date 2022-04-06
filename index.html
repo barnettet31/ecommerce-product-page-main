@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left [ flex flex-gap-16 ]">
+        <img src="./images/icon-menu.svg" alt="" class="menu-button" />
+        <img src="./images/logo.svg" alt="Sneakers" class="logo" />
+      </div>
+      <nav class="nav">
+        <img src="./images/icon-close.svg" alt="" class="close-menu" />
+        <ul class="[ nav-list ] [ flex flex-gap-20 ]">
+          <li class="[ nav-item ]">
+            <a href="#" class="[ nav-link ] [ fs-26 fc-very-dark-blue ]">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="[ nav-link ] [ fs-26 fc-very-dark-blue ]">Men</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="[ nav-link ] [ fs-26 fc-very-dark-blue ]">Women</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="[ nav-link ] [ fs-26 fc-very-dark-blue ]">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="[ nav-link ] [ fs-26 fc-very-dark-blue ]">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="[ header-content ]">
+        <div class="cart-profile-container [ flex ]">
+          <img src="./images/icon-cart.svg" alt="Shopping Cart" class="cart" />
+          <img
+            src="./images/image-avatar.png"
+            alt="Avatar Image"
+            class="avatar"
+          />
+        </div>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <section class="main">
+      <div class="slide-div" current-slide="1">
+        <div class="slide-button-container">
+          <div class="slide-button previous-slide" id="previous"></div>
+         
+         <div class="slide-button next-slide" id="next"></div> 
+        </div>
+        <img  id="slide-1"  src="./images/image-product-1.jpg" alt="" class="product-img" />
+        <img  id="slide-2"  src="./images/image-product-2.jpg" alt="" class="product-img" />
+        <img id="slide-3"  src="./images/image-product-3.jpg" alt="" class="product-img" />
+        <img  id="slide-4" src="./images/image-product-4.jpg" alt="" class="product-img" />
+      </div>
+      <div class="carousel-div">
+        <img src="./images/image-product-1.jpg" alt="" id="current-img" class="carousel-img">
+        <div class="thumb-div">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" id="carousel-thumb-1" class="carousel-thumb">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" id="carousel-thumb-2" class="carousel-thumb">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" id="carousel-thumb-3" class="carousel-thumb">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" id="carousel-thumb-4" class="carousel-thumb">
+        </div>
+      </div>
+      <div class="product  [ flex ] ">
+      <p class="[ company-name ] [ fc-orange fw-700 fs-12 ]">Sneaker Company</p>
+      <h2 class="product-type  [ fc-very-dark-blue ]">Fall Limited Edition Sneakers</h2>
+      <p class="product-description">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they’ll withstand everything the
+        weather can offer.
+      </p>
+      <div class="pricing-container">
+        <div>
+        <h3 class="current-price">$125.00</h3>
+        <p class="discount [ fc-orange fw-700 ]">50%</p>
+      </div>
+        <p class="list-price  [ fc-grey-blue ]">$250</p>
+        </div>
+        <div class="cart-container">
+        <div class="count-container  [ flex ] ">
+          <img src="./images/icon-minus.svg" alt="" class="minus">
+          <p class="current-count">0</p>
+          <img src="./images/icon-plus.svg" alt="" class="plus">
+        </div>
+        <button class="add-to-cart">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"  fill-rule="nonzero"/></svg>Add to cart
+        </button></div>
+      </div>
+    </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./design.js"></script>
+  </body>
+</html>
