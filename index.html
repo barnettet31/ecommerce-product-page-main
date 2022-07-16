@@ -46,12 +46,27 @@
       </nav>
       <div class="[ header-content ]">
         <div class="cart-profile-container [ flex ]">
-          <img src="./images/icon-cart.svg" alt="Shopping Cart" class="cart" />
+          <div class="cart-icon-container"><img src="./images/icon-cart.svg" alt="Shopping Cart" class="cart" /><p class="item_number">
+          </p></div>
           <img
             src="./images/image-avatar.png"
             alt="Avatar Image"
             class="avatar"
           />
+          <div class="shopping__cart_window">
+            <p>Cart</p>
+            <div class="cart-contents">
+              <div class="item_container">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="Item Thumbnail" class="cart_thumb"/>
+                <div class="cart_item_details">
+                  <p class="cart_item_name">Fall Limited Edition Sneakers</p>
+                  <p class="cart_price_information">$125 x 3 <span class='cart_item_price_total'>$375.00</span></p>
+                </div>
+                <img class="cart-trash" src="./images/icon-delete.svg"/>
+              </div>
+              <button class="checkout_button">Checkout</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -120,5 +135,6 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
     <script src="./design.js"></script>
+    <script src="./shopping-cart.js"></script>
   </body>
 </html>
