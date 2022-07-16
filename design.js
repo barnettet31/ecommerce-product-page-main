@@ -25,7 +25,6 @@ header.addEventListener("click", (event) => {
 function handleSlide(direction) {
   const currentSlide = parseInt(scroller.getAttribute("current-slide"));
   let nextSlide = currentSlide + 1;
-  console.log(currentSlide);
   if (currentSlide === 1 && direction === "previous") nextSlide = 4;
   if (currentSlide === 4 && direction === "next") nextSlide = 1;
   document.getElementById(`slide-${nextSlide}`).scrollIntoView(false);

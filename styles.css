@@ -613,6 +613,7 @@ li {
 
   .product {
     padding: 0;
+    justify-content: center;
   }
   .cart-container{
     display:flex;
@@ -627,5 +628,6 @@ li {
   }
   .count-container{
     width:50%;
+    margin:0;
   }
 }
