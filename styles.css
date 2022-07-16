@@ -456,7 +456,9 @@ li {
 .company-name {
   margin-bottom: 1.25em;
 }
-
+.cart-trash{
+  cursor: pointer;
+}
 /*UTILS*/
 
 .flex {

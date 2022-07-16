@@ -63,6 +63,8 @@ class ShoppingCart {
     resetCart(){
         this.numberOfItems = 0;
         this.setCartItems();
+        handleShowCartWindow();
+        localStorage.removeItem('shoppingCart')
     }
 }
 const currentCart = new ShoppingCart('Fall Limited Edition Sneakers', 125.00, 0);
@@ -104,6 +106,7 @@ const handleAddToCart =()=>{
     const currentCount = Number(countContainer.getAttribute('data-count'));
     if(currentCount == 0) return;
     currentCart.incrementItems(currentCount);
+    handleShowCartWindow();
     resetCount();
 }
 cartContainer.addEventListener('click', ({target})=>{
