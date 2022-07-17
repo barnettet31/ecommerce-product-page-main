@@ -25,12 +25,12 @@ header.addEventListener("click", (event) => {
 ///////////////////////////SLIDER HANDLER ////////////////////////////////////////
 
 function handleSlide(direction) {
-  const currentSlide = parseInt(scroller.getAttribute("current-slide"));
+  const currentSlide = parseInt(scroller.getAttribute("data-current-slide"));
   let nextSlide = currentSlide + 1;
   if (currentSlide === 1 && direction === "previous") nextSlide = 4;
   if (currentSlide === 4 && direction === "next") nextSlide = 1;
   document.getElementById(`slide-${nextSlide}`).scrollIntoView(false);
-  scroller.setAttribute("current-slide", nextSlide.toString());
+  scroller.setAttribute("data-current-slide", nextSlide.toString());
 }
 
 
