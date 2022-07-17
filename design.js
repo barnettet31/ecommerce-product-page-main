@@ -3,8 +3,9 @@ const nav = document.querySelector(".nav");
 const overlay = document.querySelector(".overlay");
 const scroller = document.querySelector(".slide-div");
 const slideButtons = document.querySelectorAll(".slide-button");
-
-
+const slideOverlay = document.querySelector('.slide-overlay');
+const mainPictureContainer = document.querySelector('.slide-container');
+const slideOverLayClose = document.querySelector('.slide-overlay-close');
 ///////////////////////////MENU HANDLER ////////////////////////////////////////
 function toggleMenu() {
   nav.classList.toggle("nav--shown");
@@ -32,9 +33,10 @@ function handleSlide(direction) {
 }
 
 
-scroller.addEventListener("click", (e) => {
-  if (e.target.classList.contains("slide-button")) {
-    const targetId = e.target.getAttribute("id");
+scroller.addEventListener("click", ({target}) => {
+
+  if (target.classList.contains("slide-button")) {
+    const targetId = target.getAttribute("id");
     handleSlide(targetId);
   }
 });
@@ -49,4 +51,12 @@ document.querySelector('.thumb__container').addEventListener('click', ({target})
   document.getElementById(`slide-${targetData}`).scrollIntoView(false);
   
 })
+
+/////////OverLay SlidLogic /////////////////////////
+const showSlideOverlay = ()=>{
+  slideOverlay.classList.toggle('slide-overlay--shown');
+}
+mainPictureContainer.addEventListener('click', showSlideOverlay);
+slideOverLayClose.addEventListener('click', showSlideOverlay);
+
 
