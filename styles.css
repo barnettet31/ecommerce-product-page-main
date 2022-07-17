@@ -620,7 +620,7 @@ li {
 
   }
   .overlay-carousel-thumb{
-    position: relative;
+    overflow: hidden;
   }
   .current__thumb {
     opacity: 0.8;
@@ -767,7 +767,7 @@ li {
   .overlay-carousel-thumb--active {
     border: 2px solid var(--orange);
    background-color:  rgba(255, 255, 255, 0.75);
-    background-blend-mode:hard-light;
+    
 
   }
   .overlay-carousel-thumb--active::after{
@@ -786,11 +786,11 @@ li {
   .overlay-carousel-thumb::after{
     content:'';
   
-    width:88px;
-    height:88px;
+    width:100px;
+    height:100px;
     display:inline-block;
     position: relative;
-    border-radius: 15px;
+  
   }
 
   .overlay-carousel-thumb:hover::after{
